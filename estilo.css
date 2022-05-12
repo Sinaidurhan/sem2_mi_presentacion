@@ -38,8 +38,8 @@ nav{
 }
 
 .slider {
-    width: 95%;
-    background-color: black;
+    /* width: 95%; Esto debe de estar al cien, por default esta al 100 */
+    background-color: rgb(0, 0, 0);
     margin: 0%;
     overflow: hidden;
 }
@@ -59,8 +59,13 @@ animation: cambio 20s infinite alternate;
 
 }
 .slider img {
-    width: 1300px;
-    height: 1300px;
+    /* Se debe poner el width en 100% para que tus imagenes abarquen todo el ancho y el height en auto para que se ajuste sola la altura dependiendo del ancho, como recomendacion, se bederian de omitir las propiedades de algo y ancho y utilizar fotos con un mismo tamanio ej. 1920 x 1080 */
+    /* width: 1300px;
+    height: 1300px; */
+    
+    width: 100%;
+    height: auto;
+
 }
 @keyframes cambio {
     0% {margin-left: 0%;}
@@ -75,8 +80,13 @@ animation: cambio 20s infinite alternate;
     60% {margin-left: -300%;}
     75% {margin-left: -300%;}
 
-    80% {margin-left: -500%;}
-    100% {margin-left: -500%;}
+    /* Esta parte soluciona la parte negra que se ve al final de tu slider, tenias la medida en -500% y debia estar en -400% */
+    /* 80% {margin-left: -500%;}
+    100% {margin-left: -500%;} */
+
+    80% {margin-left: -400%;}
+    100% {margin-left: -400%;}
+
 
 }
  .article {
